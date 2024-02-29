@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "e090d733-3647-4486-985e-47f44cfb03bf",
+		"name": "GL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17906147"
+	},
+	"item": [
+		{
+			"name": "insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/ab/insert.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ab",
+						"insert.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/ab/delete.php?user_name=pai",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ab",
+						"delete.php"
+					],
+					"query": [
+						{
+							"key": "user_name",
+							"value": "pai"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\": \"example_user\",\r\n    \"password\": \"example_password12345\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/ab/update.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ab",
+						"update.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/ab/view.php?user_name=22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ab",
+						"view.php"
+					],
+					"query": [
+						{
+							"key": "user_name",
+							"value": "22"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/ab/view.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ab",
+						"view.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

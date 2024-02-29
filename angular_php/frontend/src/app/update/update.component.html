@@ -1,0 +1,30 @@
+<div class="container-box">
+  <form action="" class="form-section" [formGroup]="form" (ngSubmit)="submit()">
+    <label for="user_name " class="label-section">First Name</label>
+    <input
+      type="text"
+      class="input-section"
+      formControlName="user_name"
+      placeholder="Enter First Name"
+    />
+
+    <label for="user_name " class="label-section">Password</label>
+    <input
+      type="text"
+      class="input-section"
+      formControlName="password"
+      placeholder="Enter Last Name"
+    />
+
+    <div class="aleart-section" *ngIf="alert">
+      <p>ERROR: Please fill all felids of form</p>
+    </div>
+
+    <button class="btn-section">Submit</button>
+  </form>
+
+  <h3>
+    Entered Name :
+    {{ form.value.user_name + " " + form.value.password }}
+  </h3>
+</div>

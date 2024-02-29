@@ -1,0 +1,6 @@
+{
+  "/ab/*": {
+    "target": "http://localhost",
+    "secure": false
+  }
+}

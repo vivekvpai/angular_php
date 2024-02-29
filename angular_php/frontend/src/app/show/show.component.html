@@ -1,0 +1,38 @@
+<div class="container-box">
+
+ <div>
+  <a routerLink="/create"  class="btn-section" >
+    Create
+  </a>
+ </div>
+
+  <table class="">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>User</th>
+        <th>password</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of user_list; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>
+          {{ item.user_name }}
+        </td>
+        <td>
+          {{ item.user_password }}
+        </td>
+        <td>
+          <button class="button"
+          (click)="remove(item.user_name)"
+          >Delete</button>
+          <button class="button"
+          (click)="update(item.user_name)"
+          >update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
